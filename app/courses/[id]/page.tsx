@@ -419,40 +419,42 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                       <Button className="mt-4 md:mt-0">Write a Review</Button>
                     </div>
                   </ScrollAnimation>
-
                   <StaggerChildren className="space-y-6">
-                    {[
-                      {
-                        name: "John D.",
-                        date: "2 months ago",
-                        rating: 5,
-                        comment:
-                          "This course exceeded my expectations. The instructor explains complex concepts in a way that's easy to understand. I went from knowing nothing about web development to building my own portfolio website. Highly recommended!",
-                      },
-                      {
-                        name: "Maria S.",
-                        date: "3 months ago",
-                        rating: 4,
-                        comment:
-                          "Great course with lots of practical examples. The projects were challenging but very helpful for reinforcing the concepts. The only reason I'm giving 4 stars instead of 5 is that some sections could use more detailed explanations.",
-                      },
-                      {
-                        name: "Robert T.",
-                        date: "1 month ago",
-                        rating: 5,
-                        comment:
-                          "Sarah is an amazing instructor! Her teaching style is clear and engaging. The course content is comprehensive and up-to-date with the latest web development practices. I landed a junior developer job after completing this course.",
-                      },
-                    ].map((review, index) => (
-                      <StaggerItem key={index}>
-                        <div className="border-b border-gray-200 pb-6 last:border-0">
-                          <div className="flex items-center justify-between mb-2">
-                            <div className="font-medium">{review.name}</div>
-                            <div className="text-sm text-gray-500">{review.date}</div>
-                        </div>
-                      </StaggerItem>
-                    ))}
-                  </StaggerChildren>
+  {[
+    {
+      name: "John D.",
+      date: "2 months ago",
+      rating: 5,
+      comment:
+        "This course exceeded my expectations. The instructor explains complex concepts in a way that's easy to understand. I went from knowing nothing about web development to building my own portfolio website. Highly recommended!",
+    },
+    {
+      name: "Maria S.",
+      date: "3 months ago",
+      rating: 4,
+      comment:
+        "Great course with lots of practical examples. The projects were challenging but very helpful for reinforcing the concepts. The only reason I'm giving 4 stars instead of 5 is that some sections could use more detailed explanations.",
+    },
+    {
+      name: "Robert T.",
+      date: "1 month ago",
+      rating: 5,
+      comment:
+        "Sarah is an amazing instructor! Her teaching style is clear and engaging. The course content is comprehensive and up-to-date with the latest web development practices. I landed a junior developer job after completing this course.",
+    },
+  ].map((review, index) => (
+    <StaggerItem key={index}>
+      <div className="border-b border-gray-200 pb-6 last:border-0">
+        <div className="flex items-center justify-between mb-2">
+          <div className="font-medium">{review.name}</div>
+          <div className="text-sm text-gray-500">{review.date}</div>
+        </div>
+        <div className="text-gray-700">{review.comment}</div>
+      </div>
+    </StaggerItem>
+  ))}
+</StaggerChildren>
+
                 </div>
               </TabsContent>
             </Tabs>
