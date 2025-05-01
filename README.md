@@ -1,5 +1,9 @@
+
+
+```markdown
 # EduLearn - Modern Education Platform
 
+[![Live Demo](https://img.shields.io/badge/Live%20Project-Click%20Here-blue?style=for-the-badge)](https://edu-learn-cyan.vercel.app/)
 
 ## Overview
 
@@ -35,30 +39,30 @@ EduLearn is a comprehensive online education platform built with Next.js and Tai
 ### Installation
 
 1. Clone the repository:
-   \`\`\`bash
+   ```bash
    git clone https://github.com/yourusername/edulearn.git
    cd edulearn
-   \`\`\`
+   ```
 
 2. Install dependencies:
-   \`\`\`bash
+   ```bash
    npm install
    # or
    yarn install
-   \`\`\`
+   ```
 
 3. Run the development server:
-   \`\`\`bash
+   ```bash
    npm run dev
    # or
    yarn dev
-   \`\`\`
+   ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
 ## Project Structure
 
-\`\`\`
+```
 edulearn/
 ├── app/                  # Next.js app directory
 │   ├── about/            # About page
@@ -80,21 +84,27 @@ edulearn/
 ├── public/               # Static assets
 │   └── assets/           # Images and other assets
 └── README.md             # Project documentation
-\`\`\`
+```
 
 ## Screenshots
+Home Page: 
 
-![Homepage](./public/assets/screenshots/homepage.png)
-![Courses](./public/assets/screenshots/courses.png)
-![Course Detail](./public/assets/screenshots/course-detail.png)
+![image](https://github.com/user-attachments/assets/a053d20f-51d7-4cde-a99b-88e8a7f5c633)
 
-## License
+Services:
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+![image](https://github.com/user-attachments/assets/6ffe9d24-3895-4822-9d98-07beed3bfb37)
+
+Courses Page:
+
+![image](https://github.com/user-attachments/assets/83515502-c728-4de4-a108-155957306c8c)
+
 
 ## Acknowledgements
 
 - Design inspiration from modern educational platforms
 - Icons from [Lucide React](https://lucide.dev/)
 - UI components based on [shadcn/ui](https://ui.shadcn.com/)
-\`\`\`
+```
+
+Let me know if you want help adding badges, screenshots, or GitHub Actions deployment status too.
