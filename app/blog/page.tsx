@@ -9,6 +9,12 @@ import { Input } from "@/components/ui/input"
 import { FadeIn, ScrollAnimation, StaggerChildren, StaggerItem, HoverCard } from "@/components/animations"
 import { Search, ArrowRight, Calendar, Clock } from "lucide-react"
 
+import blog from "@/public/images/blog_Image.png";
+import article from "@/public/images/article.png";
+import ai from "@/public/images/ai.png";
+import article1 from "@/public/images/article1.png";
+import article2 from "@/public/images/article2.png";
+
 export default function BlogPage() {
   return (
     <main className="min-h-screen">
@@ -17,8 +23,8 @@ export default function BlogPage() {
       {/* Hero Section */}
       <section className="pt-24 pb-16">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="relative w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden">
-            <Image src="/placeholder.svg?height=400&width=1200" alt="Blog header" fill className="object-cover" />
+          <div className="relative w-full h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+            <Image src={blog} alt="Blog header" fill className="object-cover" />
           </div>
 
           <FadeIn className="text-center max-w-3xl mx-auto mt-12">
@@ -71,7 +77,7 @@ export default function BlogPage() {
                 title: "The Future of Remote Learning",
                 category: "EDUCATION",
                 excerpt: "Exploring emerging technologies and methodologies that are reshaping online education",
-                image: "/placeholder.svg?height=200&width=400",
+                image: article,
                 date: "Apr 15, 2023",
                 readTime: "8 min read",
               },
@@ -80,7 +86,7 @@ export default function BlogPage() {
                 category: "CAREER",
                 excerpt:
                   "Discover the most in-demand skills that can help you stand out in today's competitive job market",
-                image: "/placeholder.svg?height=200&width=400",
+                image: article,
                 date: "Mar 28, 2023",
                 readTime: "6 min read",
               },
@@ -88,7 +94,7 @@ export default function BlogPage() {
                 title: "Effective Learning Strategies",
                 category: "LEARNING",
                 excerpt: "Science-backed techniques to improve retention, focus, and overall learning efficiency",
-                image: "/placeholder.svg?height=200&width=400",
+                image: article,
                 date: "Feb 12, 2023",
                 readTime: "5 min read",
               },
@@ -97,7 +103,7 @@ export default function BlogPage() {
                 <HoverCard className="bg-white overflow-hidden rounded-lg shadow-sm h-full flex flex-col">
                   <div className="aspect-video relative">
                     <Image
-                      src={article.image || "/placeholder.svg"}
+                      src={article.image || article}
                       alt={article.title}
                       fill
                       className="object-cover"
@@ -149,7 +155,7 @@ export default function BlogPage() {
                 category: "TECHNOLOGY",
                 excerpt:
                   "Exploring how artificial intelligence is transforming the way we evaluate student learning and progress",
-                image: "/placeholder.svg?height=100&width=100",
+                image: ai,
                 date: "May 5, 2023",
                 readTime: "7 min read",
               },
@@ -158,7 +164,7 @@ export default function BlogPage() {
                 category: "CAREER",
                 excerpt:
                   "Tips and strategies for creating a compelling portfolio that showcases your skills to potential employers",
-                image: "/placeholder.svg?height=100&width=100",
+                image: ai,
                 date: "Apr 28, 2023",
                 readTime: "9 min read",
               },
@@ -167,7 +173,7 @@ export default function BlogPage() {
                 category: "LEARNING",
                 excerpt:
                   "How breaking down learning into small, manageable chunks can lead to better retention and skill development",
-                image: "/placeholder.svg?height=100&width=100",
+                image: ai,
                 date: "Apr 15, 2023",
                 readTime: "5 min read",
               },
@@ -176,7 +182,7 @@ export default function BlogPage() {
                 category: "SUCCESS STORY",
                 excerpt:
                   "A step-by-step journey of how one student accelerated their programming career through strategic learning",
-                image: "/placeholder.svg?height=100&width=100",
+                image: ai,
                 date: "Apr 10, 2023",
                 readTime: "10 min read",
               },
@@ -185,7 +191,7 @@ export default function BlogPage() {
                 category: "INDUSTRY",
                 excerpt:
                   "The most in-demand cybersecurity skills that can help recent graduates land their first job in the field",
-                image: "/placeholder.svg?height=100&width=100",
+                image: ai,
                 date: "Apr 3, 2023",
                 readTime: "6 min read",
               },
@@ -194,7 +200,7 @@ export default function BlogPage() {
                 category: "PRODUCTIVITY",
                 excerpt:
                   "Practical strategies for managing your time effectively while pursuing education alongside a career",
-                image: "/placeholder.svg?height=100&width=100",
+                image: ai,
                 date: "Mar 27, 2023",
                 readTime: "8 min read",
               },
@@ -203,7 +209,7 @@ export default function BlogPage() {
                 <div className="flex flex-col md:flex-row gap-6 bg-gray-50 p-6 rounded-lg">
                   <div className="w-full md:w-24 h-24 relative flex-shrink-0">
                     <Image
-                      src={article.image || "/placeholder.svg"}
+                      src={article.image || ai}
                       alt={article.title}
                       fill
                       className="object-cover rounded-md"
@@ -279,7 +285,7 @@ export default function BlogPage() {
             <ScrollAnimation>
               <div className="relative w-full h-[400px] rounded-lg overflow-hidden mb-8">
                 <Image
-                  src="/placeholder.svg?height=400&width=1200"
+                  src={article1}
                   alt="Editor's pick featured article"
                   fill
                   className="object-cover"
@@ -301,9 +307,9 @@ export default function BlogPage() {
             </ScrollAnimation>
 
             <ScrollAnimation delay={0.2}>
-              <div className="relative w-full h-[400px] rounded-lg overflow-hidden">
+              <div className="relative w-full h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=400&width=1200"
+                  src={article2}
                   alt="Editor's pick second article"
                   fill
                   className="object-cover"

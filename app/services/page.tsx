@@ -7,17 +7,20 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { FadeIn, ScrollAnimation, StaggerChildren, StaggerItem, HoverCard } from "@/components/animations"
 
+import services from "@/public/images/services.png"
+import man from "@/public/images/man.png";
+
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen">
+    <main className="mx-auto">
       <Navbar />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="relative w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden">
+          <div className="relative w-full h-[400px] md:h-[600px] rounded-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=1200"
+              src={services}
               alt="Students in a meeting"
               fill
               className="object-cover"
@@ -192,7 +195,7 @@ export default function ServicesPage() {
             <ScrollAnimation delay={0.3}>
               <div className="relative h-[400px]">
                 <Image
-                  src="/placeholder.svg?height=400&width=500"
+                  src={man}
                   alt="Learning resources illustration"
                   fill
                   className="object-contain"

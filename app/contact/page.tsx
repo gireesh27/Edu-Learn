@@ -11,6 +11,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { FadeIn, ScrollAnimation, StaggerChildren, StaggerItem } from "@/components/animations"
 import { Phone, Mail, MapPin, MessageSquare } from "lucide-react"
 import { motion } from "framer-motion"
+import contact from "@/public/images/contact_us.png";
+import campus from "@/public/images/campus.png";
 
 export default function ContactPage() {
   return (
@@ -20,14 +22,13 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="pt-24 pb-16">
         <div className="container mx-auto px-4 md:px-6">
-          <FadeIn className="text-center max-w-3xl mx-auto">
-            <div className="w-48 h-48 mx-auto mb-8">
+          <FadeIn className="text-center py-2">
+            <div className="relative w-full h-[400px] md:h-[600px] rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=200&width=200&text=CONTACT+US"
+                src={contact}
                 alt="Contact Us"
-                width={200}
-                height={200}
-                className="object-contain"
+                fill
+                className="object-cover"
               />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
@@ -143,8 +144,8 @@ export default function ContactPage() {
           </ScrollAnimation>
 
           <div className="mb-8">
-            <div className="relative w-full h-[400px] rounded-lg overflow-hidden">
-              <Image src="/placeholder.svg?height=400&width=1200" alt="Campus" fill className="object-cover" />
+            <div className="relative w-full h-400 md:h-[600px] rounded-lg md:rounded-2xl overflow-hidden">
+              <Image src={campus} alt="Campus" fill className="object-cover" />
             </div>
           </div>
 

@@ -9,13 +9,17 @@ import { BookOpen, Users, Award, Clock, ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 import { SlideIn, StaggerChildren, StaggerItem, ScrollAnimation, HoverCard } from "@/components/animations"
 
+import hero from "@/public/images/hero.png"
+import course from "@/public/images/course.png";
+import blog from "@/public/images/blog.png"
+
+
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="mx-auto">
       <Navbar />
-
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-[#38bdf8]">
+      <section className="pt-24 pb-16 bg-[#29a4e1] ">
         <div className="container mx-auto px-4 md:px-6 py-12 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <SlideIn direction="left">
@@ -86,11 +90,11 @@ export default function Home() {
             </SlideIn>
             <SlideIn direction="right" delay={0.3} className="hidden lg:block">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src={hero}
                 alt="Student with books"
                 width={600}
                 height={600}
-                className="object-cover"
+                className="object-cover rounded-2xl"
               />
             </SlideIn>
           </div>
@@ -115,28 +119,28 @@ export default function Home() {
                 title: "Web Development",
                 category: "CODING",
                 description: "Master HTML, CSS, JavaScript, and modern frameworks to build responsive websites",
-                image: "/placeholder.svg?height=200&width=300",
+                image: course,
                 price: "$89.99",
               },
               {
                 title: "Data Science",
                 category: "TECH",
                 description: "Learn data analysis, visualization, and machine learning with Python",
-                image: "/placeholder.svg?height=200&width=300",
+                image: course,
                 price: "$79.99",
               },
               {
                 title: "Business Management",
                 category: "BUSINESS",
                 description: "Develop essential leadership skills and business strategies for career growth",
-                image: "/placeholder.svg?height=200&width=300",
+                image: course,
                 price: "$69.99",
               },
             ].map((course, index) => (
               <StaggerItem key={index}>
                 <HoverCard className="bg-gray-50 rounded-lg overflow-hidden">
                   <div className="aspect-video relative">
-                    <Image src={course.image || "/placeholder.svg"} alt={course.title} fill className="object-cover" />
+                    <Image src={course.image || course} alt={course.title} fill className="object-contain" />
                   </div>
                   <div className="p-6">
                     <div className="text-sm text-primary font-medium mb-2">{course.category}</div>
@@ -270,26 +274,26 @@ export default function Home() {
               {
                 title: "The Future of Online Learning",
                 excerpt: "Exploring emerging technologies and methodologies in education",
-                image: "/placeholder.svg?height=200&width=400",
+                image: blog,
                 date: "Apr 15, 2023",
               },
               {
                 title: "5 Career Development Tips",
                 excerpt: "Essential strategies for professional growth in today's job market",
-                image: "/placeholder.svg?height=200&width=400",
+                image: blog,
                 date: "Mar 28, 2023",
               },
               {
                 title: "Learning Effectively Online",
                 excerpt: "Maximize your online learning experience with these proven techniques",
-                image: "/placeholder.svg?height=200&width=400",
+                image: blog,
                 date: "Feb 12, 2023",
               },
             ].map((post, index) => (
               <StaggerItem key={index}>
                 <HoverCard className="bg-white overflow-hidden rounded-lg shadow-sm">
                   <div className="aspect-video relative">
-                    <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover" />
+                    <Image src={post.image || blog} alt={post.title} fill className="object-fit" />
                   </div>
                   <div className="p-6">
                     <div className="text-sm text-gray-500 mb-2">{post.date}</div>

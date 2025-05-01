@@ -9,6 +9,9 @@ import { FadeIn, ScrollAnimation, StaggerChildren, StaggerItem, HoverCard } from
 import { motion } from "framer-motion"
 import { Play } from "lucide-react"
 
+import testimonials from "@/public/images/testimonials.png"
+import user from "@/public/images/profile.png"
+import video from "@/public/images/video.png"
 export default function TestimonialsPage() {
   return (
     <main className="min-h-screen">
@@ -17,12 +20,12 @@ export default function TestimonialsPage() {
       {/* Hero Section */}
       <section className="pt-24 pb-16">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="relative w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden">
+          <div className="relative w-full h-[400px] md:h-[600px] rounded-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=1200"
+              src={testimonials}
               alt="Students with reviews"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
 
@@ -61,21 +64,21 @@ export default function TestimonialsPage() {
                     {
                       name: "Sarah Johnson",
                       course: "Web Development Bootcamp",
-                      image: "/placeholder.svg?height=100&width=100",
+                      image: user,
                       quote:
                         "The Web Development course completely changed my career trajectory. I went from knowing almost nothing about coding to landing a job as a front-end developer within just three months of completing the course. The curriculum was comprehensive and the instructors were incredibly supportive.",
                     },
                     {
                       name: "Michael Chen",
                       course: "Data Science Masterclass",
-                      image: "/placeholder.svg?height=100&width=100",
+                      image: user,
                       quote:
                         "After completing the Data Science course, I was able to transition from my role in marketing to a data analyst position. The hands-on projects and real-world applications made complex concepts accessible and practical. I'm now using these skills daily in my new career.",
                     },
                     {
                       name: "Priya Patel",
                       course: "UX/UI Design Professional",
-                      image: "/placeholder.svg?height=100&width=100",
+                      image: user,
                       quote:
                         "The design course gave me both the technical skills and confidence to launch my freelance design career. Within weeks of finishing, I had secured my first three clients. The portfolio projects were particularly valuable for showcasing my abilities to potential clients.",
                     },
@@ -85,7 +88,7 @@ export default function TestimonialsPage() {
                         <div className="flex items-center mb-4">
                           <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                             <Image
-                              src={testimonial.image || "/placeholder.svg"}
+                              src={testimonial.image || user}
                               alt={testimonial.name}
                               width={48}
                               height={48}
@@ -123,32 +126,32 @@ export default function TestimonialsPage() {
                       name: "James Wilson",
                       before: "Retail Manager",
                       after: "Full Stack Developer at Google",
-                      image: "/placeholder.svg?height=60&width=60",
+                      image: user,
                     },
                     {
                       name: "Anna Rodriguez",
                       before: "Executive Assistant",
                       after: "Data Analyst at Amazon",
-                      image: "/placeholder.svg?height=60&width=60",
+                      image: user,
                     },
                     {
                       name: "David Kim",
                       before: "Teacher",
                       after: "Product Designer at Airbnb",
-                      image: "/placeholder.svg?height=60&width=60",
+                      image: user,
                     },
                     {
                       name: "Sophia Martinez",
                       before: "Sales Representative",
                       after: "Digital Marketing Manager at Netflix",
-                      image: "/placeholder.svg?height=60&width=60",
+                      image: user,
                     },
                   ].map((story, index) => (
                     <ScrollAnimation key={index} delay={index * 0.1}>
                       <div className="flex items-center bg-white p-4 rounded-lg shadow-sm">
                         <div className="w-10 h-10 rounded-full overflow-hidden mr-4">
                           <Image
-                            src={story.image || "/placeholder.svg"}
+                            src={story.image || user}
                             alt={story.name}
                             width={40}
                             height={40}
@@ -249,7 +252,7 @@ export default function TestimonialsPage() {
                   <ScrollAnimation>
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                       <Image
-                        src="/placeholder.svg?height=500&width=900"
+                        src={video}
                         alt="Video testimonial"
                         fill
                         className="object-cover"
@@ -271,13 +274,13 @@ export default function TestimonialsPage() {
                       <StaggerItem key={index}>
                         <div className="relative aspect-square rounded-lg overflow-hidden cursor-pointer">
                           <Image
-                            src={`/placeholder.svg?height=150&width=150&text=Student${index + 1}`}
+                            src={`/images/profile${index + 1}.png`}
                             alt={`Student testimonial ${index + 1}`}
                             fill
-                            className="object-cover"
+                            className="object-contain"
                           />
                           <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                            <Play className="h-8 w-8 text-white" />
+                            
                           </div>
                         </div>
                       </StaggerItem>

@@ -7,20 +7,23 @@ import { Button } from "@/components/ui/button"
 import { FadeIn, ScrollAnimation, StaggerChildren, StaggerItem } from "@/components/animations"
 import { motion } from "framer-motion"
 
+import about from "@/public/images/about.png"
+import profile from "@/public/images/profile.png";
+
 export default function AboutPage() {
   return (
-    <main className="min-h-screen">
+    <main className="mx-auto">
       <Navbar />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="relative w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden">
+          <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=1200"
+              src={about}
               alt="Students collaborating"
               fill
-              className="object-cover"
+              className="object-fit"
             />
           </div>
 
@@ -65,7 +68,7 @@ export default function AboutPage() {
               </div>
             </ScrollAnimation>
 
-            <ScrollAnimation delay={0.2}>
+            <ScrollAnimation >
               <div className="bg-white p-8 rounded-lg shadow-sm">
                 <div className="text-sm text-primary font-medium mb-2">VISION</div>
                 <h3 className="text-xl font-bold mb-4">Our Vision</h3>
@@ -128,19 +131,19 @@ export default function AboutPage() {
               {
                 name: "Dr. Sarah Johnson",
                 role: "FOUNDER & CEO",
-                image: "/placeholder.svg?height=200&width=200",
+                image: profile,
                 bio: "Former professor with 15+ years in education technology. PhD in Educational Psychology from Stanford University.",
               },
               {
                 name: "Michael Chen",
                 role: "CHIEF ACADEMIC OFFICER",
-                image: "/placeholder.svg?height=200&width=200",
+                image: profile,
                 bio: "Education innovator with experience at leading universities. Specializes in curriculum development and learning outcomes.",
               },
               {
                 name: "Emily Rodriguez",
                 role: "HEAD OF TECHNOLOGY",
-                image: "/placeholder.svg?height=200&width=200",
+                image: profile,
                 bio: "Tech industry veteran focused on creating intuitive learning platforms. Previously led engineering teams at major EdTech companies.",
               },
             ].map((member, index) => (
@@ -150,7 +153,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold mb-2">{member.name}</h3>
                   <div className="w-24 h-24 rounded-full overflow-hidden mx-auto my-4">
                     <Image
-                      src={member.image || "/placeholder.svg"}
+                      src={member.image || profile}
                       alt={member.name}
                       width={96}
                       height={96}

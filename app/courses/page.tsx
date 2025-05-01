@@ -10,6 +10,8 @@ import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Star, Clock, Users, Filter, Search } from "lucide-react"
 
+import course_image from "@/public/images/course_image.png"
+import web_dev from "@/public/images/web_dev.jpg";
 export default function CoursesPage() {
   return (
     <main className="min-h-screen">
@@ -17,12 +19,21 @@ export default function CoursesPage() {
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gray-100">
-        <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
-          <div className="text-center max-w-3xl mx-auto">
+        <div className="container mx-auto px-4 md:px-6  ">
+        <div className="relative w-full h-[400px] md:h-[600px] rounded-lg overflow-hidden pb-8 md:pb-16">
+            <Image 
+            src={course_image}
+            alt="course"
+            fill
+            className="object-cover"
+            />
+            </div>
+          <div className="text-center max-w-3xl mx-auto pb-8 md:pb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Course Catalog</h1>
             <p className="text-xl text-gray-600">
               Expand your knowledge with our diverse selection of expert-led courses
             </p>
+
           </div>
         </div>
       </section>
@@ -170,7 +181,7 @@ export default function CoursesPage() {
                       students: "12,345",
                       rating: 4.8,
                       price: "$89.99",
-                      image: "/placeholder.svg?height=200&width=300",
+                      image: web_dev,
                     },
                     {
                       title: "Data Science Fundamentals",
@@ -180,7 +191,7 @@ export default function CoursesPage() {
                       students: "8,721",
                       rating: 4.7,
                       price: "$79.99",
-                      image: "/placeholder.svg?height=200&width=300",
+                      image: web_dev,
                     },
                     {
                       title: "Business Management Essentials",
@@ -190,7 +201,7 @@ export default function CoursesPage() {
                       students: "5,432",
                       rating: 4.6,
                       price: "$69.99",
-                      image: "/placeholder.svg?height=200&width=300",
+                      image: web_dev,
                     },
                     {
                       title: "UI/UX Design Masterclass",
@@ -200,7 +211,7 @@ export default function CoursesPage() {
                       students: "7,890",
                       rating: 4.9,
                       price: "$94.99",
-                      image: "/placeholder.svg?height=200&width=300",
+                      image: web_dev,
                     },
                     {
                       title: "Digital Marketing Strategy",
@@ -210,7 +221,7 @@ export default function CoursesPage() {
                       students: "9,876",
                       rating: 4.5,
                       price: "$59.99",
-                      image: "/placeholder.svg?height=200&width=300",
+                      image: web_dev,
                     },
                     {
                       title: "Python for Data Analysis",
@@ -220,7 +231,7 @@ export default function CoursesPage() {
                       students: "6,543",
                       rating: 4.8,
                       price: "$84.99",
-                      image: "/placeholder.svg?height=200&width=300",
+                      image: web_dev,
                     },
                     {
                       title: "Mobile App Development with React Native",
@@ -230,7 +241,7 @@ export default function CoursesPage() {
                       students: "4,321",
                       rating: 4.7,
                       price: "$74.99",
-                      image: "/placeholder.svg?height=200&width=300",
+                      image: web_dev,
                     },
                     {
                       title: "Project Management Professional",
@@ -240,7 +251,7 @@ export default function CoursesPage() {
                       students: "7,654",
                       rating: 4.6,
                       price: "$64.99",
-                      image: "/placeholder.svg?height=200&width=300",
+                      image: web_dev,
                     },
                     {
                       title: "Graphic Design for Beginners",
@@ -250,7 +261,7 @@ export default function CoursesPage() {
                       students: "5,678",
                       rating: 4.5,
                       price: "$54.99",
-                      image: "/placeholder.svg?height=200&width=300",
+                      image: web_dev,
                     },
                   ]
 
