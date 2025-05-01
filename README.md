@@ -106,4 +106,3 @@ Courses Page:
 - UI components based on [shadcn/ui](https://ui.shadcn.com/)
 ```
 
-Let me know if you want help adding badges, screenshots, or GitHub Actions deployment status too.
