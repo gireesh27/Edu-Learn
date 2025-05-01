@@ -3,8 +3,7 @@
 ```markdown
 # EduLearn - Modern Education Platform
 
-[![Live Demo](https://img.shields.io/badge/Live%20Project-Click%20Here-blue?style=for-the-badge)](https://edu-learn-cyan.vercel.app/)
-
+LiveDemo:[https://edu-learn-cyan.vercel.app/](https://edu-learn-cyan.vercel.app/)
 ## Overview
 
 EduLearn is a comprehensive online education platform built with Next.js and TailwindCSS. The platform offers a wide range of courses across various disciplines, interactive learning experiences, and a user-friendly interface for both students and educators.
