@@ -104,5 +104,4 @@ Courses Page:
 - Design inspiration from modern educational platforms
 - Icons from [Lucide React](https://lucide.dev/)
 - UI components based on [shadcn/ui](https://ui.shadcn.com/)
-```
 
